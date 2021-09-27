@@ -1,0 +1,40 @@
+
+ul,li{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+/* 先把整体放到中间 好看一些 */
+.box{
+    width:100vw;
+    height:  100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+}
+.box ul{
+    overflow: hidden;
+    display: flex;
+    float: left;
+    /* 取一个宽度 */
+    width: 800px;
+    transition: width 0.5s;
+}
+.box ul li{
+    width: 160px;
+    transition: width 0.5s;
+}
+.box ul li img{
+    height: 300px;
+}
+
+/* 当鼠标悬浮的时候 */
+.box ul:hover li{
+    width: 100px;
+    transition: width 0.5s;
+}
+.box ul li:hover {
+    width: 400px;
+    transition: width 0.5s;
+}
