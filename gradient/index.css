@@ -1,0 +1,82 @@
+.container .box{
+    width:200px;
+    height: 100px;
+    background-color: rgb(231, 165, 23);
+    text-align: center;
+    /* 文字居中，采用行高和所在元素高度一致 */
+    line-height: 100px;
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+}
+.container .box2{
+    /* 默认方向自上而下 */
+    background: linear-gradient(#eee,#000);
+}
+.container .box3{
+    /* 默认方向自上而下 */
+    /* 使用颜色块完成颜色分层 */
+    background: linear-gradient(rgb(207, 36, 36) 50%,rgb(15, 131, 226) 50%);
+}
+/* 这里没有填充满100% 中间就产生过渡的渐变效果 */
+.container .box4{
+    background: linear-gradient(rgb(207, 36, 36) 30%,rgb(15, 131, 226) 50%);
+}
+/* 如果我们需要更改颜色占比，岂不是每次都需要修改两次 */
+/* 我们可以采取，第二个颜色从上一个颜色的起始位置开始 */
+.container .box5{
+    background: linear-gradient(rgb(207, 36, 36) 30%,rgb(15, 131, 226) 0);
+}
+/* border增设gradient */
+.container .box6{   
+    /* 更改盒子类型  保持原有大小一致*/
+    box-sizing: border-box;
+    border:10px solid transparent;
+    border-image: linear-gradient(rgb(207, 36, 36) ,rgb(15, 131, 226)) 10;
+}
+/* 更改渲染的方向 */
+.container .box7{   
+    background: linear-gradient( to right,#eee,#000);
+}
+/* 使用角度来选择渐变方向 */
+.container .box8{
+    background: linear-gradient( 120deg,rgb(211, 233, 18),rgb(235, 139, 13));
+}
+/* 
+    多种色彩 
+    颜色我拷贝的
+*/
+.container .box9{
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+}
+.container .radial-box .box{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.container .radial-box .box10{
+    background: radial-gradient(#eee,#000);
+}
+
+.container .radial-box .box11{
+    background: radial-gradient(circle,rgb(253, 18, 18),rgb(18, 123, 243));
+}
+
+.container .radial-box .box12{
+    background-image: radial-gradient(farthest-corner at 40px 40px,
+      #f35 0%, #43e 100%);
+}
+.container .radial-box .box13{
+    border-radius: 0%;
+    background: radial-gradient(closest-side , #3fa659, #bce40d, #3cb2f6,#f35);
+}
+
+.container .grid-box .box14{
+    /* 底色 */
+    background-color: rgb(231, 146, 160);
+    background-image: 
+        linear-gradient(90deg,rgba(42, 253, 23, 0.5) 50%,transparent 0),
+        linear-gradient(0deg,rgba(11, 189, 243, 0.5) 50%,transparent 0);
+    /* 形成块 */
+    background-size: 50px 50px;
+}
+
